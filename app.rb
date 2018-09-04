@@ -22,7 +22,7 @@ get '/zahyou/:num' do
 
 end
 
-get '/clear/:num' do
+get '/clear' do
 
   # ローカルホストの UDPポート : 10000 宛にOSCメッセージを送信するOSCクライアントのインスタンスを作成
   client = OSC::Client.new('localhost', 10000)
