@@ -1,11 +1,12 @@
 require 'sinatra'
 require 'osc-ruby'
 
+set :bind, '0.0.0.0'
 
 def osc_send(msg)
   # ipアドレス, UDPポート : 宛にOSCメッセージを送信するOSCクライアントのインスタンスを作成
-  client = OSC::Client.new('169.254.214.172', 10000)
-  # client = OSC::Client.new('localhost', 10000)
+  # client = OSC::Client.new('169.254.214.172', 10000)
+  client = OSC::Client.new('localhost', 10000)
 
   # OSCメッセージを作成
   # 第一引数にOSCアドレス、以降に送信する内容を指定する
